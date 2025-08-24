@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Julian Date Converter</title>
+</head>
+<body>
+    <h1>Julian Date Converter</h1>
+
+    <form action="/convert" method="post">
+        <label for="date">Enter Date (YYYY-MM-DD): </label>
+        <input type="text" id="date" name="date" th:value="${date}">
+        <button type="submit">Convert</button>
+    </form>
+
+    <div th:if="${jd != null}">
+        <p>Julian Date: <b th:text="${jd}"></b></p>
+    </div>
+
+    <div th:if="${error != null}">
+        <p style="color:red;" th:text="${error}"></p>
+    </div>
+</body>
+</html>
