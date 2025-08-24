@@ -42,9 +42,9 @@ public class JulianController {
         int A = year / 100;
         int B = 2 - A + (A / 4);
 
-        double jd = Math.floor(365.25 * (year + 4716))
-                  + Math.floor(30.6001 * (month + 1))
-                  + day + B - 1524.5;
+        double jd = Math.floor(365.25 * (year + 4713))
+                + Math.floor(30.6001 * (month + 1))
+                + day + B - 1524.5;
 
         return jd;
     }
